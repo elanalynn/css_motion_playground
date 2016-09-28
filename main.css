@@ -1,19 +1,43 @@
-body {
-  background-color: gold;
+/*@keyframes ball-bounce {
+  0% { transformY: 0px; },
+  50% {transformY: 30px}
+  100% { transformY: 100px; }
+}*/
+
+@keyframes bg {
+  0%, 100% {
+    background-color: #001F3F;
+  }
+  50% {
+    background-color: #FF4136;
+  }
 }
+
+@keyframes txt {
+  0%, 100% {
+    color: #FFF;
+  }
+  50% {
+    color: #000;
+  }
+}
+
 
 .ball {
-  margin-top: 30px;
-  width: 100px;
   height: 100px;
-  background-color: gold;
+  width: 100px;
   border-radius: 50%;
-  transition:
-    transform 5s;
-/*     background 5s; */
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  background-color: yellow;
+  animation:
+    bg 5s linear infinite,
+    txt 4s linear infinite;
 }
 
-.ball .roll {
-  transform: translateX(100px);
-/*   backround: blue; */
-}
+/*.move {
+  transform: translateX(500px);
+}*/
