@@ -1,0 +1,19 @@
+body {
+  background-color: gold;
+}
+
+.ball {
+  margin-top: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  border-radius: 50%;
+  transition:
+    transform 5s;
+/*     background 5s; */
+}
+
+.ball .roll {
+  transform: translateX(100px);
+/*   backround: blue; */
+}
