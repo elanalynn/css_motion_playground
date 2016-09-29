@@ -1,8 +1,7 @@
-/*@keyframes ball-bounce {
-  0% { transformY: 0px; },
-  50% {transformY: 30px}
-  100% { transformY: 100px; }
-}*/
+/*body {
+  display: flex;
+  justify-content: center;
+}
 
 @keyframes bg {
   0%, 100% {
@@ -22,6 +21,22 @@
   }
 }
 
+@keyframes mv {
+  0% {
+    justify-content: flex-start;
+  }
+  50% {
+    justify-content: center;
+  }
+  100% {
+    justify-content: flex-end;
+  }
+}
+
+body {
+  animation: mv 2s linear infinite;
+}
+
 
 .ball {
   height: 100px;
@@ -34,10 +49,29 @@
   color: blue;
   background-color: yellow;
   animation:
-    bg 5s linear infinite,
-    txt 4s linear infinite;
-}
+    bg 2s linear infinite,
+    txt 2s linear infinite;
+}*/
 
 /*.move {
   transform: translateX(500px);
 }*/
+
+.tuna {
+  /* use the timing function steps() to chunk the animation into 12 equal pieces */
+  background: url(http://stash.rachelnabors.com/animation-workshop/sprite_catwalk.png) 0 0 no-repeat;
+  animation: tunaWalk 1s steps(12) infinite;
+  height: 200px;
+  width: 400px;
+  margin: 100px auto 0;
+}
+
+/* Don't forget: You'll need an @keyframes block to change the background image's position! */
+@keyframes tunaWalk {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -2400px;
+  }
+}
